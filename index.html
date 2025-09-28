@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Jinshasan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Simple animation for content fade-in */
+        .content-card {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Styling for active language button */
+        .lang-btn.active {
+            background-color: #4f46e5; /* indigo-600 */
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header with Language Buttons -->
+    <header class="bg-white shadow-md sticky top-0 z-10 p-2">
+        <div class="container mx-auto flex justify-center items-center space-x-2">
+            <button id="btn-gu" class="lang-btn active text-sm px-3 py-2 rounded-md transition-colors duration-300" onclick="changeLanguage('gu')">ગુજરાતી</button>
+            <button id="btn-hi" class="lang-btn text-sm px-3 py-2 rounded-md transition-colors duration-300" onclick="changeLanguage('hi')">हिन्दी</button>
+            <button id="btn-en" class="lang-btn text-sm px-3 py-2 rounded-md transition-colors duration-300" onclick="changeLanguage('en')">English</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-6">
+        
+        <!-- Page 1 Content -->
+        <div id="page1" class="space-y-6">
+            <!-- Card 1: Main Title -->
+            <div class="content-card bg-white rounded-lg shadow-lg p-6 text-center">
+                <h1 id="main-title" class="text-2xl md:text-3xl font-bold text-indigo-600"></h1>
+                <p id="group" class="mt-2 text-lg text-gray-700"></p>
+                <div class="mt-4 border-t pt-4">
+                    <p id="author" class="font-semibold text-gray-800"></p>
+                    <p id="contact" class="text-gray-600">WhatsApp: 94299 26447 (Vadodara)</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Subtitle -->
+            <div class="content-card bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg shadow-xl p-6 text-center">
+                <h2 id="subtitle" class="text-xl md:text-2xl font-semibold"></h2>
+            </div>
+            
+            <!-- Card 3: Links -->
+            <div class="content-card bg-white rounded-lg shadow-lg p-6 space-y-4">
+                <a id="link1" href="https://drive.google.com/file/d/1LR-5ngtEmHYg9-9YO1EwExMHlnF7D86c/view" target="_blank" class="block bg-gray-50 hover:bg-gray-200 p-4 rounded-md transition-colors duration-300">
+                    <p class="font-semibold text-blue-600" id="link1-text"></p>
+                </a>
+                <a id="link2" href="https://drive.google.com/file/d/1SryItagq7VzctYH7snAkZWlEx03qYEIo/view" target="_blank" class="block bg-gray-50 hover:bg-gray-200 p-4 rounded-md transition-colors duration-300">
+                    <p class="font-semibold text-blue-600" id="link2-text"></p>
+                </a>
+                <a id="link3" href="https://youtu.be/oPtkpCwvG1I" target="_blank" class="block bg-gray-50 hover:bg-gray-200 p-4 rounded-md transition-colors duration-300">
+                    <p class="font-semibold text-blue-600" id="link3-text"></p>
+                </a>
+                <a id="link4" href="https://youtu.be/tGFX4mUmTO0" target="_blank" class="block bg-gray-50 hover:bg-gray-200 p-4 rounded-md transition-colors duration-300">
+                    <p class="font-semibold text-blue-600" id="link4-text"></p>
+                </a>
+                <a id="link5" href="https://youtu.be/-g-vKHHHOGI" target="_blank" class="block bg-gray-50 hover:bg-gray-200 p-4 rounded-md transition-colors duration-300">
+                    <p class="font-semibold text-blue-600" id="link5-text"></p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="my-8 border-t-2 border-gray-200">
+
+        <!-- Page 2 Content -->
+        <div id="page2" class="space-y-6">
+            <!-- Card 4: Mottos -->
+            <div class="content-card bg-white rounded-lg shadow-lg p-6 space-y-4">
+                <p id="heading1" class="text-lg font-semibold text-center text-purple-700"></p>
+                <p id="heading2" class="text-lg font-semibold text-center text-purple-700"></p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 pl-4">
+                    <li id="bullet1"></li>
+                    <li id="bullet2"></li>
+                    <li id="bullet3"></li>
+                    <li id="bullet4"></li>
+                </ul>
+            </div>
+
+            <!-- Card 5: Executive Summary -->
+            <div class="content-card bg-white rounded-lg shadow-lg p-6">
+                <h3 id="summary-title" class="text-2xl font-bold text-center mb-6 text-indigo-600"></h3>
+                <div class="space-y-6">
+                    <!-- Point A -->
+                    <div>
+                        <h4 id="point-a-title" class="text-xl font-semibold text-gray-800"></h4>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600 pl-4">
+                            <li id="point-a-desc1"></li>
+                            <li id="point-a-desc2"></li>
+                        </ul>
+                    </div>
+                    <!-- Point B -->
+                    <div>
+                        <h4 id="point-b-title" class="text-xl font-semibold text-gray-800"></h4>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600 pl-4">
+                            <li id="point-b-desc1"></li>
+                            <li id="point-b-desc2"></li>
+                        </ul>
+                    </div>
+                    <!-- Point C -->
+                    <div>
+                        <h4 id="point-c-title" class="text-xl font-semibold text-gray-800"></h4>
+                         <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600 pl-4">
+                            <li id="point-c-desc1"></li>
+                            <li id="point-c-desc2"></li>
+                        </ul>
+                    </div>
+                    <!-- Point D -->
+                    <div>
+                        <h4 id="point-d-title" class="text-xl font-semibold text-gray-800"></h4>
+                         <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600 pl-4">
+                            <li id="point-d-desc1"></li>
+                            <li id="point-d-desc2"></li>
+                        </ul>
+                    </div>
+                    <!-- Point E -->
+                    <div class="bg-gray-50 p-4 rounded-md">
+                        <h4 id="point-e-title" class="text-xl font-semibold text-center text-gray-800"></h4>
+                        <p id="point-e-desc" class="mt-2 text-gray-600 text-center"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const content = {
+            gu: {
+                mainTitle: "વિઝન જિનશાસન : એક્શન પ્લાન ૨૬-૨૭ સ્પર્ધા",
+                group: "ગ્રુપ B : ૭. નવી પેઢી માટે જૈન ધર્મ",
+                author: "મનીષ વી. શાહ",
+                subtitle: '"આવતીકાલ માટે જૈન ધર્મની પુનઃકલ્પના : આધ્યાત્મિક પુનરુત્થાનનો ડિજિટલ માર્ગ"',
+                link1Text: "સંપૂર્ણ અહેવાલ અંગ્રેજીમાં (PDF)",
+                link2Text: "સંપૂર્ણ અહેવાલ ગુજરાતીમાં (PDF)",
+                link3Text: "જૈન ધર્મને ડિજિટલ માર્ગે પુનર્જીવિત કરવો : યુવાનોને જોડવાની આધુનિક પહેલ (30 min. : Audio)",
+                link4Text: "ભવિષ્ય માટે શ્રદ્ધાની પુનઃકલ્પના (8 min. : Video)",
+                link5Text: "જૈન ધર્મ અને આધુનિક યુવા : એક નવો દ્રષ્ટિકોણ : નવી પેઢી જૈન ધર્મ (5 min. : Video)",
+                heading1: '"આવતીકાલ માટે જૈન ધર્મની પુનઃકલ્પના: આધ્યાત્મિક પુનરુત્થાનનો ડિજિટલ માર્ગ"',
+                heading2: '"ભવિષ્ય માટે તૈયાર જૈન ધર્મ: મનને જોડવું, આત્માને સમૃદ્ધ બનાવવું"',
+                bullet1: "જૈન શાસનનું પુનરુત્થાન: યુવાનો, પરિવારો અને ડિજિટલ શિક્ષણની શક્તિ",
+                bullet2: "ધાર્મિક વિધિઓથી સાક્ષાત્કાર સુધી: જૈન ધર્મને આજે પ્રાસંગિક બનાવવો",
+                bullet3: "સૌ માટે જિન શાસન: એક દ્રષ્ટિ, એક સમુદાય, એક ભવિષ્ય",
+                bullet4: "જૈન ધર્મના ૩૬૫ દિવસ: આજીવન જોડાણ માટેની કાર્ય યોજના",
+                summaryTitle: "કાર્યકારી સારાંશ:",
+                pointA_Title: "અ. યુનિવર્સલ પાઠશાળા વેબ પોર્ટલ",
+                pointA_Desc1: "જૈન વિડિયો, પુસ્તકો, રમતો અને ક્વિઝ માટેનું એક ડિજિટલ કેન્દ્ર.",
+                pointA_Desc2: "શિક્ષકો, માતા-પિતા અને વિદ્યાર્થીઓ માટે AI-સંચાલિત બહુભાષી સામગ્રી.",
+                pointB_Title: "બ. આધુનિક ડિજિટલ પાઠશાળા (પરિવાર માટે)",
+                pointB_Desc1: "વ્યવહારુ જૈન ધર્મ, વાર્તાઓ અને રમતો સાથેના સત્રો.",
+                pointB_Desc2: "સાપ્તાહિક જૂથ ચર્ચા અને મનોરંજક પારિવારિક પ્રવૃત્તિઓ.",
+                pointC_Title: "ક. તપોવન શાળાઓ અને વિકલ્પો",
+                pointC_Desc1: "જૈન-કેન્દ્રિત શાળાઓ શરૂ કરવી અથવા હાલની શાળાઓ સાથે સહયોગ કરવો.",
+                pointC_Desc2: "મુખ્ય પ્રવાહના શિક્ષણમાં જૈન મૂલ્યો, રજાઓ અને ભોજન ઉમેરવું.",
+                pointD_Title: "ડ. રમતગમત, મનોરંજન અને પ્રવાસ જૂથો",
+                pointD_Desc1: "રમતો, પ્રવાસ, સંબંધો અને સુરક્ષા માટે જૈન યુવા જૂથો.",
+                pointD_Desc2: "આજીવન મિત્રતા અને મજબૂત નૈતિક નેટવર્ક બનાવે છે.",
+                pointE_Title: '"જૈન મલ્ટી-પર્પઝ હોલ"',
+                pointE_Desc: "તમામ વયજૂથો માટે થિયેટર, રમતો, યોગ અને સાંસ્કૃતિક શિક્ષણ સાથેનું એક જીવંત કેન્દ્ર."
+            },
+            hi: {
+                mainTitle: "विजन जिनशासन: एक्शन प्लान २६-२७ प्रतियोगिता",
+                group: "ग्रुप B: ७. नई पीढ़ी के लिए जैन धर्म",
+                author: "मनीष वी. शाह",
+                subtitle: '"कल के लिए जैन धर्म की पुनर्कल्पना: आध्यात्मिक पुनरुत्थान का डिजिटल मार्ग"',
+                link1Text: "पूरी रिपोर्ट अंग्रेजी में (PDF)",
+                link2Text: "पूरी रिपोर्ट गुजराती में (PDF)",
+                link3Text: "जैन धर्म को डिजिटल रूप से पुनर्जीवित करना: युवाओं को जोड़ने की एक आधुनिक पहल (30 मिनट: ऑडियो)",
+                link4Text: "भविष्य के लिए आस्था की पुनर्कल्पना (8 मिनट: वीडियो)",
+                link5Text: "जैन धर्म और आधुनिक युवा: एक नया दृष्टिकोण: नई पीढ़ी जैन धर्म (5 मिनट: वीडियो)",
+                heading1: '"कल के लिए जैन धर्म की पुनर्कल्पना: आध्यात्मिक पुनरुत्थान का डिजिटल मार्ग"',
+                heading2: '"भविष्य के लिए तैयार जैन धर्म: मन को जोड़ना, आत्मा को समृद्ध करना"',
+                bullet1: "जैन शासन का पुनरुत्थान: युवा, परिवार और डिजिटल शिक्षा की शक्ति",
+                bullet2: "अनुष्ठानों से आत्म-साक्षात्कार तक: जैन धर्म को आज प्रासंगिक बनाना",
+                bullet3: "सभी के लिए जिन शासन: एक दृष्टि, एक समुदाय, एक भविष्य",
+                bullet4: "जैन धर्म के ३६५ दिन: आजीवन जुड़ाव के लिए एक कार्य योजना",
+                summaryTitle: "कार्यकारी सारांश:",
+                pointA_Title: "अ. यूनिवर्सल पाठशाला वेब पोर्टल",
+                pointA_Desc1: "जैन वीडियो, किताबें, गेम और क्विज़ के लिए एक डिजिटल केंद्र।",
+                pointA_Desc2: "शिक्षकों, माता-पिता और छात्रों के लिए एआई-संचालित बहुभाषी सामग्री।",
+                pointB_Title: "ब. आधुनिक डिजिटल पाठशाला (परिवार के लिए)",
+                pointB_Desc1: "व्यावहारिक जैन धर्म, कहानियों और खेलों के साथ सत्र।",
+                pointB_Desc2: "साप्ताहिक समूह चर्चा और मजेदार पारिवारिक गतिविधियाँ।",
+                pointC_Title: "क. तपोवन स्कूल और विकल्प",
+                pointC_Desc1: "जैन-केंद्रित स्कूल शुरू करना या मौजूदा स्कूलों के साथ सहयोग करना।",
+                pointC_Desc2: "मुख्यधारा की शिक्षा में जैन मूल्यों, छुट्टियों और भोजन को जोड़ना।",
+                pointD_Title: "ड. खेल, मनोरंजन और यात्रा समूह",
+                pointD_Desc1: "खेल, यात्रा, संबंधों और सुरक्षा के लिए जैन युवा समूह।",
+                pointD_Desc2: "आजीवन दोस्ती और एक मजबूत नैतिक नेटवर्क बनाता है।",
+                pointE_Title: '"जैन बहुउद्देश्यीय हॉल"',
+                pointE_Desc: "सभी आयु समूहों के लिए थिएटर, खेल, योग और सांस्कृतिक शिक्षा के साथ एक जीवंत केंद्र।"
+            },
+            en: {
+                mainTitle: "Vision Jinshasan : Action Plan 26-27 Competition",
+                group: "Group B : 7. Jainism for the New Generation",
+                author: "Manish V. Shah",
+                subtitle: '"Reimagining Jainism for Tomorrow: A Digital Path to Spiritual Revival"',
+                link1Text: "Full Report in English (PDF)",
+                link2Text: "Full Report in Gujarati (PDF)",
+                link3Text: "Reviving Jainism Digitally: A Modern Initiative to Engage Youth (30 min. : Audio)",
+                link4Text: "Reimagining Faith for the Future (8 min. : Video)",
+                link5Text: "Jainism and Modern Youth: A New Perspective: New Generation Jain Dharma (5 min. : Video)",
+                heading1: '"Reimagining Jainism for Tomorrow: A Digital Path to Spiritual Revival"',
+                heading2: '"Future-Ready Jainism: Engaging Minds, Enriching Souls"',
+                bullet1: "Revival of Jain Shasan: The Power of Youth, Families, and Digital Education",
+                bullet2: "From Rituals to Realization: Making Jainism Relevant Today",
+                bullet3: "Jin Shasan for All: One Vision, One Community, One Future",
+                bullet4: "365 Days of Jainism: An Action Plan for Lifelong Connection",
+                summaryTitle: "Executive Summary:",
+                pointA_Title: "A. Universal Pathshala Web Portal",
+                pointA_Desc1: "A digital hub for Jain videos, books, games, and quizzes.",
+                pointA_Desc2: "AI-powered multilingual content for teachers, parents, and students.",
+                pointB_Title: "B. Modern Digital Pathshala (For Families)",
+                pointB_Desc1: "Sessions with practical Jainism, stories, and games.",
+                pointB_Desc2: "Weekly group discussions and fun family activities.",
+                pointC_Title: "C. Tapovan Schools and Alternatives",
+                pointC_Desc1: "Starting Jain-centric schools or collaborating with existing ones.",
+                pointC_Desc2: "Adding Jain values, holidays, and meals to mainstream education.",
+                pointD_Title: "D. Sports, Recreation, and Travel Groups",
+                pointD_Desc1: "Jain youth groups for sports, travel, relationships, and safety.",
+                pointD_Desc2: "Creates lifelong friendships and a strong moral network.",
+                pointE_Title: '"Jain Multi-Purpose Hall"',
+                pointE_Desc: "A vibrant center with theater, sports, yoga, and cultural education for all age groups."
+            }
+        };
+
+        function changeLanguage(lang) {
+            const data = content[lang];
+            
+            // Update Page 1
+            document.getElementById('main-title').innerText = data.mainTitle;
+            document.getElementById('group').innerText = data.group;
+            document.getElementById('author').innerText = data.author;
+            document.getElementById('subtitle').innerText = data.subtitle;
+            document.getElementById('link1-text').innerText = data.link1Text;
+            document.getElementById('link2-text').innerText = data.link2Text;
+            document.getElementById('link3-text').innerText = data.link3Text;
+            document.getElementById('link4-text').innerText = data.link4Text;
+            document.getElementById('link5-text').innerText = data.link5Text;
+            
+            // Update Page 2
+            document.getElementById('heading1').innerText = data.heading1;
+            document.getElementById('heading2').innerText = data.heading2;
+            document.getElementById('bullet1').innerText = data.bullet1;
+            document.getElementById('bullet2').innerText = data.bullet2;
+            document.getElementById('bullet3').innerText = data.bullet3;
+            document.getElementById('bullet4').innerText = data.bullet4;
+            document.getElementById('summary-title').innerText = data.summaryTitle;
+            document.getElementById('point-a-title').innerText = data.pointA_Title;
+            document.getElementById('point-a-desc1').innerText = data.pointA_Desc1;
+            document.getElementById('point-a-desc2').innerText = data.pointA_Desc2;
+            document.getElementById('point-b-title').innerText = data.pointB_Title;
+            document.getElementById('point-b-desc1').innerText = data.pointB_Desc1;
+            document.getElementById('point-b-desc2').innerText = data.pointB_Desc2;
+            document.getElementById('point-c-title').innerText = data.pointC_Title;
+            document.getElementById('point-c-desc1').innerText = data.pointC_Desc1;
+            document.getElementById('point-c-desc2').innerText = data.pointC_Desc2;
+            document.getElementById('point-d-title').innerText = data.pointD_Title;
+            document.getElementById('point-d-desc1').innerText = data.pointD_Desc1;
+            document.getElementById('point-d-desc2').innerText = data.pointD_Desc2;
+            document.getElementById('point-e-title').innerText = data.pointE_Title;
+            document.getElementById('point-e-desc').innerText = data.pointE_Desc;
+
+            // Update active button style
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`btn-${lang}`).classList.add('active');
+        }
+
+        // Load default language on page load
+        window.onload = () => {
+            changeLanguage('gu');
+        };
+    </script>
+</body>
+</html>
